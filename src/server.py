@@ -59,7 +59,7 @@ class Server(BaseHTTPRequestHandler):
             self._log_msg_creator(req_stamp, path_lst[0], err_msg=True, err_type='Method error')
 
         # Проверка на путь
-        if path_lst[0] != 'api':
+        if path_lst[0] != '/api':
             self._log_msg_creator(req_stamp, path_lst[0], err_msg=True, err_type='Path error')
         try:
             param = path_lst[1]
@@ -92,7 +92,7 @@ class Server(BaseHTTPRequestHandler):
 
         msg_param = 'Params:\n'
 
-        if param_lst is not None:
+        if param_lst:
             for item in param_lst:
                 msg_param += f'{item}'
 
