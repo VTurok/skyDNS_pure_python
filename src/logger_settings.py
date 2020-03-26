@@ -2,7 +2,7 @@
 import logging
 
 
-def logging_setup(logger_name=None, file_name='log.txt'):
+def logging_setup(logger_name=None, file_name='web_trap.log'):
     log = logging.getLogger(logger_name)
     log.setLevel(level=logging.INFO)
     handler = logging.FileHandler(file_name, 'a', 'utf-8')
